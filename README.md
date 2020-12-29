@@ -13,7 +13,9 @@ Check Point ClougGuard CSPM provides Compliance, Vulnerability Assessment, Visib
 
 ## Configure CSPM
 
-Go to [Check Point ClougGuard CSPM](https://secure.dome9.com/). Select Assets > Environment > <b>Add New</b> <br>
+Go to [Check Point ClougGuard CSPM](https://secure.dome9.com/). <br>
+
+Select Assets > Environment > <b>Add New</b> <br>
 
 Walk through the wizard. When given the helm string, <b>note the cluster ID.</b> We will use this later. Finish the wizard.
 
@@ -57,17 +59,17 @@ helm package .
 Then, install the Helm chart using the API keys, the Cluster ID noted from earlier, and the newly created service account.
 
 ```
-helm install asset-mgmt cp-resource-management-1.08.3.tgz --set-string credentials.user=<api_key> --set-string credentials.secret=<api_secret> --set-string clusterID=<cluster_id> --set ocServiceAccount=<service_account_name>  --namespace <project_name>
+helm install <release-name> cp-resource-management-1.08.3.tgz --set-string credentials.user=<api_key> --set-string credentials.secret=<api_secret> --set-string clusterID=<cluster_id> --set ocServiceAccount=<service_account_name>  --namespace <project_name>
 ```
 
 > **Tip**: List all releases using `helm list`
 
 ## Uninstalling the Chart
 
-To uninstall/delete the `my-release` deployment:
+To uninstall/delete the `<release-name>` deployment:
 
 ```bash
-$ helm delete my-release -n <namespace/project>
+$ helm delete <release-name> -n <namespace/project>
 ```
 
 This command removes all the Openshift components associated with the chart and deletes the release.
