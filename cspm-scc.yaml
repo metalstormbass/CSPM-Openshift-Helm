@@ -1,10 +1,10 @@
-allowHostDirVolumePlugin: false
-allowHostIPC: false
-allowHostNetwork: false
-allowHostPID: false
-allowHostPorts: false
+allowHostDirVolumePlugin: true
+allowHostIPC: true
+allowHostNetwork: true
+allowHostPID: true
+allowHostPorts: true
 allowPrivilegeEscalation: true
-allowPrivilegedContainer: false
+allowPrivilegedContainer: true
 allowedCapabilities: null
 apiVersion: security.openshift.io/v1
 defaultAddCapabilities: null
@@ -32,10 +32,10 @@ runAsUser:
   uid: 1000
 seLinuxContext:
   type: MustRunAs
+seccompProfiles:
+- "*"
 supplementalGroups:
   type: RunAsAny
-users:
-- system:serviceaccount:{{ .Release.Namespace }}:{{ template "cp-resource-management.serviceAccountName" . }}
 volumes:
 - configMap
 - downwardAPI
