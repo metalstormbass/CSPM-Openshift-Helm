@@ -1,8 +1,10 @@
 #  Check Point Cloudguard CSPM Agents for Openshift
 
 ## Introduction
+<p align="center">
+  ![](images/cspm2.png)
+</p>    
 
-![](images/cspm2.png)
 
 This chart creates a single resource management Pod that scans the cluster's resources (Nodes, Images, Pods, Namespaces, Services, PSP, Network Policy, and Ingress) and uploads them to [Check Point ClougGuard CSPM](https://secure.dome9.com/). <br>
 Check Point ClougGuard CSPM provides Compliance, Vulnerability Assessment, Visibility, Monitoring and Threat Hunting capabilities.
