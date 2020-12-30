@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This chart creates a single resource management Pod that scans the cluster's resources (Nodes, Images, Pods, Namespaces, Services, PSP, Network Policy, and Ingress) and uploads them to [Check Point ClougGuard CSPM](https://secure.dome9.com/).
+This chart creates a single resource management Pod that scans the cluster's resources (Nodes, Images, Pods, Namespaces, Services, PSP, Network Policy, and Ingress) and uploads them to [Check Point ClougGuard CSPM](https://secure.dome9.com/). <br>
 Check Point ClougGuard CSPM provides Compliance, Vulnerability Assessment, Visibility, Monitoring and Threat Hunting capabilities.
 
 ## Prerequisites
