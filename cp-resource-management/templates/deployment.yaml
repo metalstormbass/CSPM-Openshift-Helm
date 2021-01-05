@@ -30,7 +30,8 @@ spec:
     spec:
       securityContext:
         runAsUser: 1000
-      serviceAccountName: {{ if .Values.rbac.create }}{{ template "cp-resource-management.fullname" . }}{{ else }}{{ .Values.serviceAccount.Name | quote }}{{ end }}
+      serviceAccount: {{ .Values.ocServiceAccount }}
+      serviceAccountName: {{ .Values.ocServiceAccount }}
       {{- if .Values.nodeSelector }}
       nodeSelector:
 {{ toYaml .Values.nodeSelector | indent 8 }}

@@ -19,10 +19,3 @@ If release name contains chart name it will be used as a full name.
 {{- end -}}
 {{- end -}}
 
-{{- define "cp-resource-management.serviceAccountName" -}}
-{{- if .Values.serviceAccount.create -}}
-    {{ default (include "cp-resource-management.fullname" .) .Values.serviceAccount.name }}
-{{- else -}}
-    {{ default "default" .Values.serviceAccount.name }}
-{{- end -}}
-{{- end -}}
