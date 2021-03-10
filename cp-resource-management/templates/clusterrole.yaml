@@ -10,7 +10,7 @@ metadata:
     app.kubernetes.io/instance: {{ .Release.Name | quote }}
 rules:
   - apiGroups: [""]
-    resources: [ "pods", "services", "nodes", "nodes/proxy", "serviceaccounts", "namespaces", "resourcequotas" ]
+    resources: [ "pods", "services", "nodes", "nodes/proxy", "serviceaccounts", "namespaces", "resourcequotas", "deployments" ]
     verbs: [ "list", "get" ]
 
   - apiGroups: [ "networking.k8s.io" ]
